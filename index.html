@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmed Abdulmajeed — UX/UI Designer with a background in Management Information Systems. Bilingual Arabic/English digital experiences." />
+  <title>Ahmed Abdulmajeed — UX/UI Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Ahmed Abdulmajeed – Home">
+        <img src="assets/logo.png" alt="Ahmed Abdulmajeed" class="nav-logo-img" />
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home"           class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about"          class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#projects"       class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#design-systems" class="nav-link" data-i18n="nav.howIWork">How I Work</a></li>
+        <li><a href="#why-hire-me"    class="nav-link" data-i18n="nav.whyHire">Why Hire Me</a></li>
+        <li><a href="#contact"        class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="nav-controls">
+        <!-- Language toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option" data-val="en">EN</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-option" data-val="ar">AR</span>
+        </button>
+
+        <!-- Download CV -->
+        <a href="assets/Ahmed-Abdulmajeed-CV.pdf" download class="btn btn--primary btn--sm nav-cv" data-i18n="nav.cv">
+          Download CV
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#home"           class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="#about"          class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#projects"       class="nav-link" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#design-systems" class="nav-link" data-i18n="nav.howIWork">How I Work</a></li>
+        <li><a href="#why-hire-me"    class="nav-link" data-i18n="nav.whyHire">Why Hire Me</a></li>
+        <li><a href="#contact"        class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        <li>
+          <a href="assets/Ahmed-Abdulmajeed-CV.pdf" download class="btn btn--primary btn--sm" data-i18n="nav.cv">
+            Download CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO — assets/hero-portrait.png
+       ============================================================ -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero-bg-gradient" aria-hidden="true"></div>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow" data-i18n="hero.eyebrow">UX/UI Designer · MIS Graduate</div>
+        <h1 class="hero-title" id="hero-title" data-i18n="hero.title">Ahmed Abdulmajeed</h1>
+
+        <div class="hero-role" aria-live="polite">
+          <span class="role-prefix" data-i18n="hero.rolePrefix">I am a</span>
+          <span class="role-animated" id="roleAnimated">UX/UI Designer</span>
+        </div>
+
+        <p class="hero-statement" data-i18n="hero.statement">
+          I design bilingual digital experiences that turn complex systems into clear, human-centered interfaces.
+        </p>
+        <p class="hero-sub" data-i18n="hero.sub">
+          With a background in Management Information Systems and hands-on UX/UI projects, I connect analytical thinking with visual design to build experiences that are usable, structured, and meaningful.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects"  class="btn btn--primary" data-i18n="hero.cta1">View My Work</a>
+          <a href="assets/Ahmed-Abdulmajeed-CV.pdf" download class="btn btn--outline" data-i18n="hero.cta2">Download CV</a>
+          <a href="#contact"   class="btn btn--ghost"   data-i18n="hero.cta3">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal--right">
+        <div class="hero-img-frame">
+          <img src="assets/hero-portrait.png" alt="Ahmed Abdulmajeed — UX/UI Designer" class="hero-img" loading="eager" />
+          <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+          <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT — assets/about-portrait.png
+       Floating chips around image, CTA to contact
+       ============================================================ -->
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-inner">
+
+        <!-- Image side with floating chips -->
+        <div class="about-visual reveal reveal--left">
+          <div class="about-img-frame">
+            <div class="about-img-bg" aria-hidden="true"></div>
+            <img
+              src="assets/about-portrait.png"
+              alt="Ahmed Abdulmajeed — thoughtful portrait"
+              class="about-img"
+              loading="lazy"
+            />
+            <div class="about-img-accent" aria-hidden="true"></div>
+
+            <!-- Floating background chips around image -->
+            <div class="float-chip float-chip--1" aria-hidden="true"><span data-i18n="about.chips.mis">MIS</span></div>
+            <div class="float-chip float-chip--2" aria-hidden="true"><span data-i18n="about.chips.sysAnalysis">System Analysis</span></div>
+            <div class="float-chip float-chip--3" aria-hidden="true"><span data-i18n="about.chips.uxResearch">UX Research</span></div>
+            <div class="float-chip float-chip--4" aria-hidden="true"><span data-i18n="about.chips.uiDesign">UI Design</span></div>
+            <div class="float-chip float-chip--5" aria-hidden="true"><span data-i18n="about.chips.designSystems">Design Systems</span></div>
+            <div class="float-chip float-chip--6" aria-hidden="true"><span data-i18n="about.chips.productThinking">Product Thinking</span></div>
+          </div>
+        </div>
+
+        <!-- Content side — single title, body, CTA -->
+        <div class="about-content reveal">
+          <span class="section-label" data-i18n="about.label">About Me</span>
+          <h2 class="section-title sr-only" id="about-title" data-i18n="about.title">About Me</h2>
+
+          <p class="about-body" data-i18n="about.body">
+            I'm a UX/UI Designer with a Management Information Systems background. My strength is connecting business logic, systems thinking, and human-centered design. I enjoy turning messy problems into clear flows, structured interfaces, and experiences that feel simple for users.
+          </p>
+
+          <!-- CTA scrolls to contact -->
+          <a href="#contact" class="btn btn--primary about-cta" data-i18n="about.cta">Let's Connect</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SELECTED PROJECTS
+       ============================================================ -->
+  <section class="section projects" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label" data-i18n="projects.label">Selected Work</span>
+        <h2 class="section-title sr-only" id="projects-title" data-i18n="projects.title">Selected Work</h2>
+        <p class="section-desc" data-i18n="projects.desc">
+          A collection of projects where I explored UX thinking, interface design, branding, design systems, and bilingual digital experiences.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Fikr -->
+        <article class="project-card reveal" data-project="fikr">
+          <div class="project-img-wrap">
+            <img src="assets/project-product-strategy.png" alt="Fikr — Student Admissions Platform" loading="lazy" class="project-img" />
+            <div class="project-hover-layer" aria-hidden="true">
+              <div class="hover-chain">
+                <span class="hover-node" data-i18n="projects.hover.problem">Problem</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.system">System</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.solution">Solution</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category" data-i18n="projects.fikr.category">UX/UI Case Study</span>
+            <h3 class="project-title" data-i18n="projects.fikr.title">Fikr</h3>
+            <p class="project-desc" data-i18n="projects.fikr.desc">A platform concept that helps students track university admissions in one clear place instead of getting lost between multiple websites and deadlines.</p>
+            <div class="project-tags">
+              <span class="tag">UX Research</span>
+              <span class="tag">Arabic UI</span>
+              <span class="tag">Student Experience</span>
+              <span class="tag">Web Platform</span>
+            </div>
+            <a href="https://www.behance.net/gallery/249643109/Fikr-Designing-Clarity-for-the-Next-Saudi-Generation" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm project-cta" data-i18n="projects.cta">View Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Syarah -->
+        <article class="project-card reveal" data-project="syarah">
+          <div class="project-img-wrap">
+            <img src="assets/project-syarah.png" alt="Behind the Wheel of Trust — Syarah App" loading="lazy" class="project-img" />
+            <div class="project-hover-layer" aria-hidden="true">
+              <div class="hover-chain">
+                <span class="hover-node" data-i18n="projects.hover.problem">Problem</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.system">System</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.solution">Solution</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category" data-i18n="projects.syarah.category">UX Case Study</span>
+            <h3 class="project-title" data-i18n="projects.syarah.title">Behind the Wheel of Trust — Syarah App</h3>
+            <p class="project-desc" data-i18n="projects.syarah.desc">A UX case study focused on improving trust in the used-car buying journey through car history, comparison, onboarding, and test-drive scheduling.</p>
+            <div class="project-tags">
+              <span class="tag">UX Research</span>
+              <span class="tag">User Journey</span>
+              <span class="tag">Trust</span>
+              <span class="tag">Mobile App</span>
+            </div>
+            <a href="https://www.behance.net/gallery/237435523/Behind-the-Wheel-of-Trust-Syarah-App-UX-Case-Study" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm project-cta" data-i18n="projects.cta">View Case Study →</a>
+          </div>
+        </article>
+
+        <!-- Project 3: Rafiq (corrected spelling) -->
+        <article class="project-card reveal" data-project="rafiq">
+          <div class="project-img-wrap">
+            <img src="assets/project-rafeeq.png" alt="Rafiq — Pet Care Brand &amp; UI" loading="lazy" class="project-img" />
+            <div class="project-hover-layer" aria-hidden="true">
+              <div class="hover-chain">
+                <span class="hover-node" data-i18n="projects.hover.problem">Problem</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.system">System</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.solution">Solution</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category" data-i18n="projects.rafiq.category">Brand &amp; UI Design</span>
+            <h3 class="project-title" data-i18n="projects.rafiq.title">Rafiq</h3>
+            <p class="project-desc" data-i18n="projects.rafiq.desc">A friendly pet care brand and app concept designed around trust, warmth, and simple access to pet care services.</p>
+            <div class="project-tags">
+              <span class="tag">Brand Identity</span>
+              <span class="tag">UI Design</span>
+              <span class="tag">Visual System</span>
+            </div>
+            <span class="btn btn--outline btn--sm project-cta project-cta--soon" data-i18n="projects.rafiq.cta">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Project 4: Design Tokens System -->
+        <article class="project-card reveal" data-project="tokens">
+          <div class="project-img-wrap">
+            <img src="assets/project-design-system.png" alt="Design Tokens System — InvestHub" loading="lazy" class="project-img" />
+            <div class="project-hover-layer" aria-hidden="true">
+              <div class="hover-chain">
+                <span class="hover-node" data-i18n="projects.hover.problem">Problem</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.system">System</span>
+                <span class="hover-arrow">→</span>
+                <span class="hover-node" data-i18n="projects.hover.solution">Solution</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category" data-i18n="projects.tokens.category">Design System</span>
+            <h3 class="project-title" data-i18n="projects.tokens.title">Design Tokens System</h3>
+            <p class="project-desc" data-i18n="projects.tokens.desc">A design system exploration focused on variables, semantic tokens, typography, spacing, components, and multi-theme consistency.</p>
+            <div class="project-tags">
+              <span class="tag">Design Tokens</span>
+              <span class="tag">Figma Variables</span>
+              <span class="tag">Components</span>
+              <span class="tag">Documentation</span>
+            </div>
+            <a href="https://www.behance.net/gallery/242864001/Token-Driven-Design-System-for-InvestHub-Cradis" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm project-cta" data-i18n="projects.cta">View Case Study →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HOW I WORK — Interactive drag-to-sort cards
+       ============================================================ -->
+  <section class="section how-i-work" id="design-systems" aria-labelledby="ds-title">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label" data-i18n="ds.label">How I Work</span>
+        <h2 class="section-title sr-only" id="ds-title" data-i18n="ds.title">How I Work</h2>
+        <p class="section-desc" data-i18n="ds.desc">
+          I don't start with screens. I start by understanding the problem, the user, and the system behind the experience. Then I move from structure to interface, making sure the final design is clear, scalable, and easy to use.
+        </p>
+        <p class="ds-hint" data-i18n="ds.hint">↕ Drag the cards into the right order</p>
+      </div>
+
+      <!-- Draggable cards container -->
+      <div class="process-drag-area reveal" id="processDragArea" aria-label="Drag to arrange my design process">
+        <!-- Cards are rendered by JS so they can be shuffled and re-ordered -->
+      </div>
+
+      <!-- Success message (hidden until correct order) -->
+      <div class="process-success" id="processSuccess" aria-live="polite" hidden>
+        <span class="process-success-icon">✓</span>
+        <p data-i18n="ds.success">This is how I turn ideas into clear digital experiences.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       WHY HIRE ME — assets/why-hire-me.png
+       ============================================================ -->
+  <section class="section why-hire" id="why-hire-me" aria-labelledby="why-title">
+    <div class="container">
+      <div class="why-inner">
+
+        <!-- Image -->
+        <div class="why-visual reveal reveal--right">
+          <div class="why-img-frame">
+            <img src="assets/why-hire-me.png" alt="Ahmed Abdulmajeed — design thinking portrait" class="why-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="why-content reveal">
+          <span class="section-label" data-i18n="why.label">Why Hire Me?</span>
+          <h2 class="section-title sr-only" id="why-title" data-i18n="why.title">Why Hire Me?</h2>
+          <p class="why-statement" data-i18n="why.statement">
+            Because I don't only design screens. I think through the system behind the screen.
+          </p>
+
+          <div class="why-cards">
+
+            <div class="why-card reveal-stagger">
+              <div class="why-card-num">01</div>
+              <div class="why-card-body">
+                <h3 data-i18n="why.cards.systems.title">Systems Thinking</h3>
+                <p data-i18n="why.cards.systems.desc">I connect business goals, user needs, and product structure before designing the interface.</p>
+              </div>
+            </div>
+
+            <div class="why-card reveal-stagger">
+              <div class="why-card-num">02</div>
+              <div class="why-card-body">
+                <h3 data-i18n="why.cards.ux.title">UX/UI Execution</h3>
+                <p data-i18n="why.cards.ux.desc">I move from research and flows to clean, usable, and polished interfaces.</p>
+              </div>
+            </div>
+
+            <div class="why-card reveal-stagger">
+              <div class="why-card-num">03</div>
+              <div class="why-card-body">
+                <h3 data-i18n="why.cards.visual.title">Clear Visual Thinking</h3>
+                <p data-i18n="why.cards.visual.desc">I turn complex ideas into simple layouts, clear hierarchy, and smooth user experiences.</p>
+              </div>
+            </div>
+
+            <div class="why-card reveal-stagger">
+              <div class="why-card-num">04</div>
+              <div class="why-card-body">
+                <h3 data-i18n="why.cards.ds.title">Design System Awareness</h3>
+                <p data-i18n="why.cards.ds.desc">I care about consistency, scalability, tokens, components, and documentation.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SKILLS & TOOLS
+       Skills: animated marquee chips
+       Tools: individual icon chips from assets/tools/ folder
+       ============================================================ -->
+  <section class="section skills" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label" data-i18n="skills.label">What I Work With</span>
+        <h2 class="section-title sr-only" id="skills-title" data-i18n="skills.title">What I Work With</h2>
+      </div>
+    </div>
+
+    <!-- Tools icon row — each tool is its own chip -->
+    <!-- Add PNG files to assets/tools/ to show real icons.
+         Currently uses styled text chips as premium fallback. -->
+    <div class="tools-row reveal">
+      <div class="container">
+        <div class="tools-chips">
+          <div class="tool-chip">
+            <img src="assets/FIGMA Logo.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Figma</span>
+          </div>
+          <div class="tool-chip">
+            <img src="assets/MIRO Logo.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Miro</span>
+          </div>
+          <div class="tool-chip">
+            <img src="assets/POWER BILogos.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Power BI</span>
+          </div>
+          <div class="tool-chip">
+            <img src="assets/NOTAION Logo.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Notion</span>
+          </div>
+          <div class="tool-chip">
+            <img src="assets/Microsoft_Office_Excel_Logo.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Excel</span>
+          </div>
+          <div class="tool-chip">
+            <img src="assets/TABEL Logo.png" onerror="this.style.display='none'" alt="" aria-hidden="true" class="tool-chip-img" />
+            <span>Tableau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills marquee row 1 — left to right -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Figma</div>
+        <div class="marquee-item">UX Research</div>
+        <div class="marquee-item">Wireframing</div>
+        <div class="marquee-item">Prototyping</div>
+        <div class="marquee-item">User Flows</div>
+        <div class="marquee-item">Journey Mapping</div>
+        <div class="marquee-item">UI Design</div>
+        <div class="marquee-item">Design Systems</div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="marquee-item" aria-hidden="true">Figma</div>
+        <div class="marquee-item" aria-hidden="true">UX Research</div>
+        <div class="marquee-item" aria-hidden="true">Wireframing</div>
+        <div class="marquee-item" aria-hidden="true">Prototyping</div>
+        <div class="marquee-item" aria-hidden="true">User Flows</div>
+        <div class="marquee-item" aria-hidden="true">Journey Mapping</div>
+        <div class="marquee-item" aria-hidden="true">UI Design</div>
+        <div class="marquee-item" aria-hidden="true">Design Systems</div>
+      </div>
+    </div>
+
+    <!-- Skills marquee row 2 — right to left -->
+    <div class="marquee-wrapper marquee-wrapper--reverse" aria-hidden="true">
+      <div class="marquee-track marquee-track--reverse">
+        <div class="marquee-item">Design Tokens</div>
+        <div class="marquee-item">Responsive Design</div>
+        <div class="marquee-item">System Analysis</div>
+        <div class="marquee-item">Power BI Basics</div>
+        <div class="marquee-item">Digital Marketing Basics</div>
+        <div class="marquee-item">HTML</div>
+        <div class="marquee-item">CSS</div>
+        <div class="marquee-item">JavaScript</div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="marquee-item" aria-hidden="true">Design Tokens</div>
+        <div class="marquee-item" aria-hidden="true">Responsive Design</div>
+        <div class="marquee-item" aria-hidden="true">System Analysis</div>
+        <div class="marquee-item" aria-hidden="true">Power BI Basics</div>
+        <div class="marquee-item" aria-hidden="true">Digital Marketing Basics</div>
+        <div class="marquee-item" aria-hidden="true">HTML</div>
+        <div class="marquee-item" aria-hidden="true">CSS</div>
+        <div class="marquee-item" aria-hidden="true">JavaScript</div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-inner reveal">
+
+        <span class="section-label" data-i18n="contact.label">Get In Touch</span>
+        <h2 class="section-title contact-title" id="contact-title" data-i18n="contact.title">
+          Let's Build Thoughtful Digital Experiences
+        </h2>
+
+        <p class="contact-body" data-i18n="contact.body">
+          Whether it's a product, portfolio, design system, or digital platform, I'm interested in creating experiences that are clear, usable, and meaningful.
+        </p>
+
+        <p class="contact-info-text" data-i18n="contact.info">
+          Open to UX/UI opportunities, freelance projects, collaborations, and meaningful digital product ideas.
+        </p>
+
+        <div class="contact-ctas">
+          <a href="mailto:ah1majeed@gmail.com" class="btn btn--primary" data-i18n="contact.btn.email">Email Me</a>
+          <a href="https://www.linkedin.com/in/ah1majeed/" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline" data-i18n="contact.btn.linkedin" aria-label="LinkedIn profile">LinkedIn</a>
+          <a href="https://www.behance.net/ah1majeed" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline" data-i18n="contact.btn.behance" aria-label="Behance profile">Behance</a>
+          <a href="assets/Ahmed-Abdulmajeed-CV.pdf" download class="btn btn--ghost" data-i18n="contact.btn.cv">Download CV</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Ahmed Abdulmajeed" class="footer-logo-img" />
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">
+        Designed and developed by Ahmed Abdulmajeed. UX/UI Designer · MIS Graduate · Design Systems Explorer
+      </p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ah1majeed/" target="_blank" rel="noopener noreferrer" data-i18n="contact.btn.linkedin">LinkedIn</a>
+        <a href="https://www.behance.net/ah1majeed"      target="_blank" rel="noopener noreferrer" data-i18n="contact.btn.behance">Behance</a>
+      </div>
+      <p class="footer-year">© <span id="footerYear"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
